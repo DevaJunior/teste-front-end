@@ -1,0 +1,62 @@
+@import '../../styles/variables';
+
+.featured-cards {
+  display: flex;
+  gap: 13px;
+  margin: 40px auto;
+  justify-content: center;
+  width: 100%;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+  }
+}
+
+.featured-card {
+  width: 100%;
+  max-width: 634px;
+  height: 350px;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  padding: 40px;
+
+  @media (max-width: 768px) {
+    height: 280px;
+    padding: 20px;
+  }
+
+  &__content {
+    h3 {
+      color: $white;
+      font-size: 40px;
+      font-weight: 700;
+      margin-bottom: 8px;
+
+      @media (max-width: 768px) {
+        font-size: 32px;
+      }
+    }
+
+    p {
+      color: $white;
+      font-size: 16px;
+      margin-bottom: 20px;
+      max-width: 180px;
+    }
+
+    button {
+      background: $secondary-color;
+      color: #000;
+      padding: 12px 30px;
+      border-radius: 10px;
+      font-weight: 900;
+      font-size: 16px;
+      letter-spacing: 0.05em;
+    }
+  }
+}

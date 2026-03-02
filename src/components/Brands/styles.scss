@@ -1,0 +1,63 @@
+@import '../../styles/variables';
+
+.brands {
+  &__title {
+    text-align: center;
+    color: $dark-blue;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 50px 0 30px 0;
+
+    @media (max-width: 768px) {
+      font-size: 24px;
+      margin: 40px 0 20px 0;
+    }
+  }
+
+  &__carousel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 80px;
+    
+    @media (max-width: 1100px) {
+      justify-content: flex-start;
+      overflow-x: auto;
+      padding-bottom: 15px;
+      scroll-snap-type: x mandatory;
+      
+      // AOculta scrollbar no Chrome, Safari e Edge
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  }
+
+  &__item {
+    width: 211px;
+    height: 211px;
+    border-radius: 50%;
+    background: $white;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; // AImpede que o círculo seja achatado no flexbox
+    scroll-snap-align: start;
+
+    // AMobile: Reduz o tamanho da bolinha para caber melhor na tela
+    @media (max-width: 768px) {
+      width: 150px;
+      height: 150px;
+    }
+
+    img {
+      width: 50%;
+      object-fit: contain;
+    }
+  }
+}
