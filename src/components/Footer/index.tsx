@@ -16,6 +16,8 @@ const Footer: React.FC = () => {
             <h2>Inscreva-se na nossa newsletter</h2>
             <p>Assine nossa newsletter e receba novidades e promoções exclusivas da Econverse</p>
           </div>
+
+          <div className='footer__newsletter-line'></div>
           
           <div className="footer__newsletter-form-wrapper">
             <form className="footer__newsletter-form" onSubmit={e => e.preventDefault()}>
