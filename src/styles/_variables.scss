@@ -1,0 +1,26 @@
+
+$primary-color: #3442B5;
+$secondary-color: #F7CA11;
+$button-blue: #3442B5; 
+$dark-blue: #041E50;
+$gray-text: #3F3F40;
+$light-gray: #F6F6F6;
+$white: #FFFFFF;
+$footer-bg: #2A2A2A;
+
+// Tipografia
+$font-main: 'Poppins', sans-serif;
+
+@mixin container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
