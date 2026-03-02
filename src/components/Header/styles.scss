@@ -1,0 +1,112 @@
+@import '../../styles/variables';
+
+.header {
+  &__top-bar {
+    border-bottom: 1px solid #F6F6F6;
+    padding: 8px 0;
+    font-size: 12px;
+    color: #9F9F9F;
+
+    .header__container {
+      display: flex;
+      justify-content: space-between;
+      
+      @media (max-width: 768px) {
+        justify-content: center;
+        text-align: center;
+      }
+
+      span {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        strong { color: $primary-color; }
+        
+        @media (max-width: 768px) {
+          display: none;
+          &:first-child { display: flex; }
+        }
+      }
+    }
+  }
+
+  &__main {
+    padding: 15px 0;
+    .header__container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  }
+
+  &__search {
+    flex: 1;
+    max-width: 716px;
+    margin: 0 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 900px) {
+      margin: 0;
+      order: 3;
+      min-width: 100%;
+    }
+
+    input {
+      width: 100%;
+      padding: 14px 24px;
+      background: #F6F6F6;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      font-size: 14px;
+      &::placeholder { color: #9F9F9F; }
+    }
+
+    &-btn {
+      position: absolute;
+      right: 20px;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: 30px;
+    
+    @media (max-width: 768px) {
+      gap: 15px;
+    }
+  }
+
+  &__nav {
+    border-top: 1px solid #F6F6F6;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.05);
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      
+      @media (max-width: 1024px) {
+        overflow-x: auto;
+        justify-content: flex-start;
+        gap: 20px;
+        padding-bottom: 5px;
+        &::-webkit-scrollbar { display: none; }
+      }
+
+      li {
+        padding: 15px 0;
+        white-space: nowrap;
+        a {
+          font-size: 12px;
+          font-weight: 600;
+          color: #9F9F9F;
+          &.active { color: $primary-color; }
+        }
+      }
+    }
+  }
+}
